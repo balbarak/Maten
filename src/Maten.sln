@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maten.Core", "Maten.Core\Maten.Core.csproj", "{2E7FB3FC-9916-4F58-9F81-6982B86077E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{19C39ED7-767D-4FF3-87E1-70FCBCD403C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maten.App", "Maten.App\Maten.App.csproj", "{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{2E7FB3FC-9916-4F58-9F81-6982B86077E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E7FB3FC-9916-4F58-9F81-6982B86077E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E7FB3FC-9916-4F58-9F81-6982B86077E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBD8D8B4-B5FE-48AF-A0AD-AEC531748365} = {19C39ED7-767D-4FF3-87E1-70FCBCD403C5}
 	EndGlobalSection
 EndGlobal

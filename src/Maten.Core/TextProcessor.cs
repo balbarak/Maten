@@ -17,12 +17,18 @@ namespace Maten.Core
             '\u0618', '\u0619', '\u061A', '\u064B', '\u064C', '\u064D',
             '\u064E', '\u064F', '\u0650', '\u0651', '\u0652' };
 
+        public static Dictionary<char, char> NormalizeMap { get; } = new Dictionary<char, char>()
+        {
+            {'أ','ا' },
+            {'إ','ا' },
+            {'ة','ه' },
+        };
+
         private TextProcessor()
         {
 
         }
-
-
+        
         public static string RemoveDiacritics(string text)
         {
             if (String.IsNullOrWhiteSpace(text))
@@ -39,7 +45,7 @@ namespace Maten.Core
             return text;
         }
 
-        public static string RemoveExtracCharacters(string text)
+        public static string RemoveExtraCharacters(string text)
         {
             if (String.IsNullOrWhiteSpace(text))
                 return text;

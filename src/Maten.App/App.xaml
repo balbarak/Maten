@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Maten.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <FontFamily x:Key="Droid Arabic Naskh">fonts/DroidNaskh-Regular.ttf#Droid Arabic Naskh</FontFamily>
+        
     </Application.Resources>
 </Application>

@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maten.App"
         mc:Ignorable="d"
-        Title="Maten Sample Application" Height="350" Width="525">
+        Title="Maten Sample Application" Height="442" Width="644">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="36"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="tabControl" Margin="10,10,10,5">
+            <TabItem Header="Text Processing">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="145*"/>
+                        <RowDefinition Height="152*"/>
+                    </Grid.RowDefinitions>
+
+                    <GroupBox x:Name="groupBox" Header="Text" Margin="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="431*"/>
+                                <ColumnDefinition Width="167*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="txtArabicText" 
+                                     FlowDirection="RightToLeft"
+                                     FontFamily="{StaticResource Droid Arabic Naskh}"
+                                     Margin="10" 
+                                     TextWrapping="Wrap" 
+                                     Text="" AcceptsReturn="True" AcceptsTab="True"/>
+                            <Button x:Name="btnRemoveDiacritics"  Grid.Column="1" Margin="10,10,10,0" Height="22" VerticalAlignment="Top" Content="Remove Diacritics"/>
+                            <Button x:Name="btnRemoveStopwords"  Grid.Column="1" Margin="10,37,10,0" Height="22" VerticalAlignment="Top" Content="Remove Stopwords" Click="btnRemoveStopwords_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1" Header="Result" Margin="10,0,10,10">
+                        <Grid>
+                            <TextBox Margin="10" x:Name="txtResult" FontFamily="{StaticResource Droid Arabic Naskh}" FlowDirection="RightToLeft" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,-3"/>
+            </TabItem>
+        </TabControl>
+        <StatusBar Grid.Row="1"/>
+
     </Grid>
 </Window>

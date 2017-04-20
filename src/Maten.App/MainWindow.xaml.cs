@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Maten.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Maten.App
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnRemoveStopwords_Click(object sender, RoutedEventArgs e)
+        {
+            var text = txtArabicText.Text;
+
+            txtResult.Text = TextProcessor.RemoveStopwords(text);
         }
     }
 }

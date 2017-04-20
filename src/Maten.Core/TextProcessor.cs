@@ -54,5 +54,28 @@ namespace Maten.Core
 
             return text;
         }
+
+        public static string RemoveStopwords(string text)
+        {
+            if (String.IsNullOrWhiteSpace(text))
+                return text;
+
+            var split = text.Split(' ');
+
+            StringBuilder sb = new StringBuilder();
+
+            var stopwords = DataManager.Instance.Stopwords;
+
+            foreach (var item in split)
+            {
+                var found = stopwords.Where(a => a.Word == item).FirstOrDefault();
+
+                if (found == null)
+                    sb.Append($"{item} ");
+            }
+
+            return sb.ToString().Trim();
+
+        }
     }
 }
